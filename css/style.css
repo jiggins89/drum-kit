@@ -1,0 +1,57 @@
+body {
+  background: url(../images/keagan-henman-387584-unsplash.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  margin: 0;
+}
+
+
+.my-container {
+  height: 95vh;
+  /*border: 5px solid green;*/
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.my-row {
+  /*border: 5px dashed red;*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mycol {
+  /*border: 5px solid skyblue;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 3px solid yellow;
+  min-height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+footer {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+}
+
+footer p {
+  margin-right: 10px;
+}
