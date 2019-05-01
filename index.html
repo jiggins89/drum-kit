@@ -14,34 +14,56 @@
   </head>
 
   <body>
-      <div class="head">
-        <img src="../images/Steinway_Logo.png" alt="">
+    <div class="head">
+      <img src="../images/Steinway_Logo.png" alt="">
+    </div>
+    
+    <div class="row my-row">
+      <div class="mycol">
+        <div class="key">C4</div>
       </div>
-      <div class="row my-row">
-        <div class="mycol">
-          <div data-key="" class="key">C4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">D4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">E4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">F4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">G4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">A4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">B4</div>
-        </div>
-        <div class="mycol">
-          <div data-key="" class="key">C5</div>
-        </div>
+      <div class="mycol">
+        <div class="key">D4</div>
       </div>
+      <div class="mycol">
+        <div class="key">E4</div>
+      </div>
+      <div class="mycol">
+        <div class="key">F4</div>
+      </div>
+      <div class="mycol">
+        <div class="key">G4</div>
+      </div>
+      <div class="mycol">
+        <div class="key">A4</div>
+      </div>
+      <div class="mycol">
+        <div class="key">B4</div>
+      </div>
+      <div class="mycol">
+        <div class="key">C5</div>
+      </div>
+    </div>
+    
+    <audio src="audio/media.io_Piano.mf.C4.wav" data-key="C4"></audio>
+    <audio src="audio/media.io_Piano.mf.D4.wav" data-key="D4"></audio>
+    <audio src="audio/media.io_Piano.mf.E4.wav" data-key="E4"></audio>
+    <audio src="audio/media.io_Piano.mf.F4.wav" data-key="F4"></audio>
+    <audio src="audio/media.io_Piano.mf.G4.wav" data-key="G4"></audio>
+    <audio src="audio/media.io_Piano.mf.A4.wav" data-key="A4"></audio>
+    <audio src="audio/media.io_Piano.mf.B4.wav" data-key="B4"></audio>
+    <audio src="audio/media.io_Piano.mf.C5.wav" data-key="C5"></audio>
+  
+    <script>
+      const keys = document.querySelectorAll(".key");
+      keys.forEach(function(key) {
+        key.addEventListener("click", function() {
+          console.log(key.innerHTML);  
+          const audio = document.querySelector(`audio[data-key = "${key.innerHTML}"]`);
+          audio.currentTime = 0;
+          audio.play();
+        });
+      }); 
+    </script>
   </body>
 </html>
