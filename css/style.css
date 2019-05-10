@@ -1,6 +1,5 @@
 body {
-  background-color: beige
-
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
 p {
@@ -8,8 +7,15 @@ p {
 }
 
 
-img {
-  height: 60%;
+#jh-logo {
+  height: 100%;
+}
+
+
+.container {
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
 }
 
 .head {
